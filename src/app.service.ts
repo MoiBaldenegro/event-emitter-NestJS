@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { getDemoTemplate } from './shared/templates/demo-template';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
+  getThanksPage(): string {
+    return getDemoTemplate();
   }
 }
