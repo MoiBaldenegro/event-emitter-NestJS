@@ -15,7 +15,7 @@ export class NotificationsService {
     // Aquí se implementaría la lógica para enviar una notificación, por ejemplo, por correo electrónico, SMS, etc.
     // Esto es solo un marcador de posición para demostrar el concepto de notificaciones gracias a la ejecucion de eventos.
     console.log(
-      `Gracias por tu registro. ${name.split(" ")[0]}, espero esta demo de eventos en nestJS te sirva de mucho dejame una estrellita, y te invito a seguirme en mis redes sientete libre de contactarme para cualquier duda.`,
+      `Gracias por tu registro. ${name.split(" ")[0]}, espero esta demo de eventos en nestJS te sirva de mucho. Dejame una estrellita, y te invito a seguirme en mis redes sientete libre de contactarme para cualquier duda.`,
     );
   }
 }
