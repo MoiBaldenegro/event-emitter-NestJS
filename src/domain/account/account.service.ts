@@ -3,7 +3,7 @@ import { AccountDTO } from 'src/data/dto/Account.dto';
 import { CreateAccountDTO } from 'src/shared/dto/account/createAccount.dto';
 import { AccountIntegration } from './integrations/account-integration';
 import { EventEmitter2 } from '@nestjs/event-emitter';
-import { accountEvents, UserCreatedNotify } from 'src/shared/types/events';
+import { accountCreatedPayload, accountEvents } from 'src/shared/types/events';
 
 @Injectable()
 export class AccountService {
@@ -20,7 +20,7 @@ export class AccountService {
   async create(body: CreateAccountDTO): Promise<AccountDTO> {
     const response = await this.accountIntegration.createAccount(body);
     const { name, email, phone } = response;
-    const payload: UserCreatedNotify = {
+    const payload: accountCreatedPayload = {
       name,
       email,
       phone,
